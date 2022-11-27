@@ -1,0 +1,102 @@
+#██████╗░███████╗████████╗████████╗███████╗██████╗░
+#██╔══██╗██╔════╝╚══██╔══╝╚══██╔══╝██╔════╝██╔══██╗
+#██████╦╝█████╗░░░░░██║░░░░░░██║░░░█████╗░░██████╔╝
+#██╔══██╗██╔══╝░░░░░██║░░░░░░██║░░░██╔══╝░░██╔══██╗
+#██████╦╝███████╗░░░██║░░░░░░██║░░░███████╗██║░░██║
+#╚═════╝░╚══════╝░░░╚═╝░░░░░░╚═╝░░░╚══════╝╚═╝░░╚═╝
+#░█████╗░██╗░░██╗██████╗░██╗░██████╗████████╗███╗░░░███╗░█████╗░░██████╗
+#██╔══██╗██║░░██║██╔══██╗██║██╔════╝╚══██╔══╝████╗░████║██╔══██╗██╔════╝
+#██║░░╚═╝███████║██████╔╝██║╚█████╗░░░░██║░░░██╔████╔██║███████║╚█████╗░
+#██║░░██╗██╔══██║██╔══██╗██║░╚═══██╗░░░██║░░░██║╚██╔╝██║██╔══██║░╚═══██╗
+#╚█████╔╝██║░░██║██║░░██║██║██████╔╝░░░██║░░░██║░╚═╝░██║██║░░██║██████╔╝
+#░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝╚═════╝░░░░╚═╝░░░╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═════╝░
+#This plugin is still in early development and may have bugs if you find any contact ScalerGames#1118 on discord or
+#join the support server https://discord.gg/GF5ncs4hMY
+DefaultSettings:
+  #These are the settings when the title feature is used in the advent calendar
+  title:
+    fadeIn: 1
+    showTitle: 5
+    fadeOut: 1
+  sound:
+    volume: 80
+    pitch: 5
+
+Permissions:
+  required: true
+
+PresentHunt:
+  #If the present hunt is enabled or not. If no commands will still be active but the listener will be disabled
+  enabled: true
+  #The total amount of presents they have to achieve
+  amount: 5
+  #The rewards for finding all the presents
+  #Rewards: [items:, title:, sub-title:, bar:, message:, player-cmd:, console-cmd:]
+  rewards:
+    items:
+      1:
+        item: "DIAMOND_AXE"
+        quantity: 1
+  #If you want to add rewards for each present use this format
+  #individual-rewards:
+    #1:
+      #title: "&cWOW"
+    #2:
+      #items:
+        #axe:
+          #item: "DIAMOND_SWORD"
+          #quantity: 1
+
+GiftBox:
+  boxes:
+    #The name for the box
+    rare:
+      #This is used to identify the item. It needs to be 4 digits
+      id: 3000
+      item: "HEAD:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGY1ODk4YWQ1NGU2MzRjNTlmYWI1YjI4NGQ0OWIzZTI1ZDAxNTUxMmNhYTNhYjU2MjBjZWNmMDBiODRmMTM0NSJ9fX0="
+      display-name: "&9&lRare &f◆ &bGift Box"
+      sound: "ENTITY_EXPERIENCE_BOTTLE_THROW"
+      rewards:
+        iron_sword:
+          items:
+            1:
+              item: "IRON_SWORD"
+              quantity: 1
+        diamond_axe:
+          items:
+            1:
+              item: "DIAMOND_AXE"
+              quantity: 1
+        apple:
+          items:
+            1:
+              item: "APPLE"
+              quantity: 32
+    super:
+      id: 3001
+      item: "HEAD:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjBmMjMxNmU0NTVhYzNjM2ZhMmUwZWQ1MmYzMDVjYzRiYzM2M2FiYWZmMTU1M2JiNzE3MGIwZGM4MzY4YWJjMSJ9fX0="
+      display-name: "&6&lSuper &f◆ &cGift Box"
+      sound: "ENTITY_EXPERIENCE_BOTTLE_THROW"
+      rewards:
+        mending:
+          message: "%betterchristmas_prefix%&2You got a Mending II book"
+          items:
+            1:
+              item: "ENCHANTED_BOOK"
+              quantity: 1
+              enchants:
+                - "MENDING:2"
+        efficiency:
+          message: "%betterchristmas_prefix%&2You got a Efficiency VI book"
+          items:
+            1:
+              item: "ENCHANTED_BOOK"
+              quantity: 1
+              enchants:
+                - "DIG_SPEED:6"
+
+
+ChristmasMessage:
+  enabled: false
+  title: "&c&lMerry"
+  sub-title: "&2&lChristmas"

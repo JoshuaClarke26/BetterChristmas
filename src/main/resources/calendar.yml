@@ -1,0 +1,849 @@
+Calendar:
+  name: "&f&lAdvent&c&lCalendar" #The name of the GUI
+  size: 45 #How big the inventory is
+  days: 25 #The amount of days the advent calendar is
+  month: 12 #What month the calendar will be active on
+  previous-days: true #If the calendar should allow people to claim previous days if they claim them after that date
+  fillers:
+    exit_button:
+      item: "BARRIER"
+      slot: 40
+      name: "&4&lExit"
+    gap_fill:
+      #You can add any item as a placeholder to the advent calendar just add another number, then follow this format.
+      1:
+        item: "RED_STAINED_GLASS_PANE"
+        name: "&f"
+        #lore: enchants: flags: can all be added
+        slots: [0,2,4,6,8,27,35,37,39,41,43]
+      2:
+        item: "WHITE_STAINED_GLASS_PANE"
+        name: "&f"
+        slots: [1,3,5,7,36,38,42,44]
+  layout:
+    #These have to be the number that links to what day it will be active on
+    1:
+      available-item:
+        #This is when the item will be available to claim
+        item: "HEAD:green_day_1" #A normal item can be added
+        #If you want to add a head use HEAD:value can be obtained from: https://minecraft-heads.com/custom-heads
+        name: "&2☃ &c&lD&2&la&c&ly &2&l1" # The display name of the item
+        lore: # The lore of the item
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Iron Pickaxe"
+          - " "
+          - "&aClick to claim this item!"
+      unavailable-item:
+        #This is for future days or days that have been missed
+        item: "HEAD:red_day_1" #Name of item
+        name: "&f☃ &c&lD&f&la&c&ly &f&l1"
+        lore:
+          - " "
+          - "&f❆ &f&lRewards:"
+          - "&f❅ &c1x Iron Pickaxe"
+          - " "
+          - "&8This can't be claimed yet"
+      opened-item:
+        #When the rewards had been previously claimed
+        item: "HEAD:green_open"
+        name: "&2☃ &2&lDay 1 - Opened"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Iron Pickaxe"
+          - " "
+          - "&aYou already claimed this item"
+      #The rewards for the day
+      rewards:
+        #Each reward needs its own name, these could be numbers. example: iron_pic
+        #This gives the player an iron pickaxe and sends a message to the player
+        iron_pic:
+          type: item
+          item: "IRON_PICKAXE"
+        pic_msg:
+          type: msg
+          message: "&fYou claimed an iron pickaxe!"
+    2:
+      available-item:
+        item: "HEAD:green_day_2"
+        name: "&2☃ &c&lD&2&la&c&ly &2&l2"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aClick to claim this item!"
+      unavailable-item:
+        item: "HEAD:red_day_2"
+        name: "&f☃ &c&lD&f&la&c&ly &f&l2"
+        lore:
+          - " "
+          - "&f❆ &f&lRewards:"
+          - "&f❅ &c1x Nice Message"
+          - " "
+          - "&8This can't be claimed yet"
+      opened-item:
+        item: "HEAD:green_open"
+        name: "&2☃ &2&lDay 2 - Opened"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aYou already claimed this item"
+      rewards:
+        example_bar:
+          type: bar
+          bar: "&2Happy &cChristmas"
+    3:
+      available-item:
+        item: "HEAD:green_day_3"
+        name: "&2☃ &c&lD&2&la&c&ly &2&l3"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Title"
+          - " "
+          - "&aClick to claim this item!"
+      unavailable-item:
+        item: "HEAD:red_day_3"
+        name: "&f☃ &c&lD&f&la&c&ly &f&l3"
+        lore:
+          - " "
+          - "&f❆ &f&lRewards:"
+          - "&f❅ &c1x Nice Title"
+          - " "
+          - "&8This can't be claimed yet"
+      opened-item:
+        item: "HEAD:green_open"
+        name: "&2☃ &2&lDay 3 - Opened"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Title"
+          - " "
+          - "&aYou already claimed this item"
+      rewards:
+        example_title:
+          type: title
+          title: "&cMerry"
+          sub-title: "&2Christmas"
+    4:
+      available-item:
+        item: "HEAD:green_day_4"
+        name: "&2☃ &c&lD&2&la&c&ly &2&l4"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Bow"
+          - "&2❅ &c64x Arrows"
+          - " "
+          - "&aClick to claim this item!"
+      unavailable-item:
+        item: "HEAD:red_day_4"
+        name: "&f☃ &c&lD&f&la&c&ly &f&l4"
+        lore:
+          - " "
+          - "&f❆ &f&lRewards:"
+          - "&f❅ &c1x Bow"
+          - "&f❅ &c64x Arrows"
+          - " "
+          - "&8This can't be claimed yet"
+      opened-item:
+        item: "HEAD:green_open"
+        name: "&2☃ &2&lDay 4 - Opened"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Bow"
+          - "&2❅ &c64x Arrows"
+          - " "
+          - "&aYou already claimed this item"
+      rewards:
+        bow:
+          type: item
+          item: "BOW"
+        arrows:
+          type: item
+          item: "ARROW"
+          quantity: 64
+    5:
+      available-item:
+        item: "HEAD:green_day_5"
+        name: "&2☃ &c&lD&2&la&c&ly &2&l5"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Action Bar"
+          - " "
+          - "&aClick to claim this item!"
+      unavailable-item:
+        item: "HEAD:red_day_5"
+        name: "&f☃ &c&lD&f&la&c&ly &f&l5"
+        lore:
+          - " "
+          - "&f❆ &f&lRewards:"
+          - "&f❅ &c1x Action Bar"
+          - " "
+          - "&8This can't be claimed yet"
+      opened-item:
+        item: "HEAD:green_open"
+        name: "&2☃ &2&lDay 5 - Opened"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Action Bar"
+          - " "
+          - "&aYou already claimed this item"
+      rewards:
+        test_bar:
+          type: bar
+          bar: "&3Happy Christmas"
+    6:
+      available-item:
+        item: "HEAD:green_day_6"
+        name: "&2☃ &c&lD&2&la&c&ly &2&l6"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Command Test"
+          - " "
+          - "&aClick to claim this item!"
+      unavailable-item:
+        item: "HEAD:red_day_6"
+        name: "&f☃ &c&lD&f&la&c&ly &f&l6"
+        lore:
+          - " "
+          - "&f❆ &f&lRewards:"
+          - "&f❅ &c1x Command Test"
+          - " "
+          - "&8This can't be claimed yet"
+      opened-item:
+        item: "HEAD:green_open"
+        name: "&2☃ &2&lDay 6 - Opened"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Command Test"
+          - " "
+          - "&aYou already claimed this item"
+      rewards:
+        test_cmd:
+          type: console_cmd
+          command: "minecraft:give {player} minecraft:diamond_axe 1"
+    7:
+      available-item:
+        item: "HEAD:green_day_7"
+        name: "&2☃ &c&lD&2&la&c&ly &2&l7"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Tittle with Subtitle"
+          - " "
+          - "&aClick to claim this item!"
+      unavailable-item:
+        item: "HEAD:red_day_7"
+        name: "&f☃ &c&lD&f&la&c&ly &f&l7"
+        lore:
+          - " "
+          - "&f❆ &f&lRewards:"
+          - "&f❅ &c1x Tittle with Subtitle"
+          - " "
+          - "&8This can't be claimed yet"
+      opened-item:
+        item: "HEAD:green_open"
+        name: "&2☃ &2&lDay 7 - Opened"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Tittle with Subtitle"
+          - " "
+          - "&aYou already claimed this item"
+      rewards:
+        title:
+          type: title
+          title: "You claimed"
+          sub-title: "Day 7's advent"
+    8:
+      available-item:
+        item: "HEAD:green_day_8"
+        name: "&2☃ &c&lD&2&la&c&ly &2&l8"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Player command"
+          - " "
+          - "&aClick to claim this item!"
+      unavailable-item:
+        item: "HEAD:red_day_8"
+        name: "&f☃ &c&lD&f&la&c&ly &f&l8"
+        lore:
+          - " "
+          - "&f❆ &f&lRewards:"
+          - "&f❅ &c1x Player command"
+          - " "
+          - "&8This can't be claimed yet"
+      opened-item:
+        item: "HEAD:green_open"
+        name: "&2☃ &2&lDay 8 - Opened"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Player command"
+          - " "
+          - "&aYou already claimed this item"
+      rewards:
+        test:
+          type: player_cmd
+          command: "me hello"
+    9:
+      available-item:
+        item: "HEAD:green_day_9"
+        name: "&2☃ &c&lD&2&la&c&ly &2&l9"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x &f&lSnow Sword"
+          - " "
+          - "&aClick to claim this item!"
+      unavailable-item:
+        item: "HEAD:red_day_9"
+        name: "&f☃ &c&lD&f&la&c&ly &f&l9"
+        lore:
+          - " "
+          - "&f❆ &f&lRewards:"
+          - "&f❅ &c1x &f&lSnow Sword"
+          - " "
+          - "&8This can't be claimed yet"
+      opened-item:
+        item: "HEAD:green_open"
+        name: "&2☃ &2&lDay 9 - Opened"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x &f&lSnow Sword"
+          - " "
+          - "&aYou already claimed this item"
+      rewards:
+        snow_sword:
+          type: item
+          item: "NETHERITE_SWORD"
+          display-name: "&f&lSnow Sword"
+          lore:
+            - "&cA special sword!"
+          enchants:
+            - "DAMAGE_ALL:7"
+            - "LOOT_BONUS_MOBS:4"
+    10:
+      available-item:
+        item: "HEAD:green_day_10"
+        name: "&2☃ &c&lD&2&la&c&ly &2&l10"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aClick to claim this item!"
+      unavailable-item:
+        item: "HEAD:red_day_10"
+        name: "&f☃ &c&lD&f&la&c&ly &f&l10"
+        lore:
+          - " "
+          - "&f❆ &f&lRewards:"
+          - "&f❅ &c1x Nice Message"
+          - " "
+          - "&8This can't be claimed yet"
+      opened-item:
+        item: "HEAD:green_open"
+        name: "&2☃ &2&lDay 10 - Opened"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aYou already claimed this item"
+      rewards:
+        msg_test:
+          type: msg
+          message: "&8&l[&cMerry &fChristmas&8&l] &cThis is your reward :{"
+    11:
+      available-item:
+        item: "HEAD:green_day_11"
+        name: "&2☃ &c&lD&2&la&c&ly &2&l11"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aClick to claim this item!"
+      unavailable-item:
+        item: "HEAD:red_day_11"
+        name: "&f☃ &c&lD&f&la&c&ly &f&l11"
+        lore:
+          - " "
+          - "&f❆ &f&lRewards:"
+          - "&f❅ &c1x Nice Message"
+          - " "
+          - "&8This can't be claimed yet"
+      opened-item:
+        item: "HEAD:green_open"
+        name: "&2☃ &2&lDay 11 - Opened"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aYou already claimed this item"
+      rewards:
+        msg_test:
+          type: msg
+          message: "&8&l[&cMerry &fChristmas&8&l] &cThis is your reward :{"
+    12:
+      available-item:
+        item: "HEAD:green_day_12"
+        name: "&2☃ &c&lD&2&la&c&ly &2&l12"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aClick to claim this item!"
+      unavailable-item:
+        item: "HEAD:red_day_12"
+        name: "&f☃ &c&lD&f&la&c&ly &f&l12"
+        lore:
+          - " "
+          - "&f❆ &f&lRewards:"
+          - "&f❅ &c1x Nice Message"
+          - " "
+          - "&8This can't be claimed yet"
+      opened-item:
+        item: "HEAD:green_open"
+        name: "&2☃ &2&lDay 12 - Opened"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aYou already claimed this item"
+      rewards:
+        msg_test:
+          type: msg
+          message: "&8&l[&cMerry &fChristmas&8&l] &cThis is your reward :{"
+    13:
+      available-item:
+        item: "HEAD:green_day_13"
+        name: "&2☃ &c&lD&2&la&c&ly &2&l13"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aClick to claim this item!"
+      unavailable-item:
+        item: "HEAD:red_day_13"
+        name: "&f☃ &c&lD&f&la&c&ly &f&l13"
+        lore:
+          - " "
+          - "&f❆ &f&lRewards:"
+          - "&f❅ &c1x Nice Message"
+          - " "
+          - "&8This can't be claimed yet"
+      opened-item:
+        item: "HEAD:green_open"
+        name: "&2☃ &2&lDay 13 - Opened"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aYou already claimed this item"
+      rewards:
+        msg_test:
+          type: msg
+          message: "&8&l[&cMerry &fChristmas&8&l] &cThis is your reward :{"
+    14:
+      available-item:
+        item: "HEAD:green_day_14"
+        name: "&2☃ &c&lD&2&la&c&ly &2&l14"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aClick to claim this item!"
+      unavailable-item:
+        item: "HEAD:red_day_14"
+        name: "&f☃ &c&lD&f&la&c&ly &f&l14"
+        lore:
+          - " "
+          - "&f❆ &f&lRewards:"
+          - "&f❅ &c1x Nice Message"
+          - " "
+          - "&8This can't be claimed yet"
+      opened-item:
+        item: "HEAD:green_open"
+        name: "&2☃ &2&lDay 14 - Opened"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aYou already claimed this item"
+      rewards:
+        msg_test:
+          type: msg
+          message: "&8&l[&cMerry &fChristmas&8&l] &cThis is your reward :{"
+    15:
+      available-item:
+        item: "HEAD:green_day_15"
+        name: "&2☃ &c&lD&2&la&c&ly &2&l15"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aClick to claim this item!"
+      unavailable-item:
+        item: "HEAD:red_day_15"
+        name: "&f☃ &c&lD&f&la&c&ly &f&l15"
+        lore:
+          - " "
+          - "&f❆ &f&lRewards:"
+          - "&f❅ &c1x Nice Message"
+          - " "
+          - "&8This can't be claimed yet"
+      opened-item:
+        item: "HEAD:green_open"
+        name: "&2☃ &2&lDay 15 - Opened"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aYou already claimed this item"
+      rewards:
+        msg_test:
+          type: msg
+          message: "&8&l[&cMerry &fChristmas&8&l] &cThis is your reward :{"
+    16:
+      available-item:
+        item: "HEAD:green_day_16"
+        name: "&2☃ &c&lD&2&la&c&ly &2&l16"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aClick to claim this item!"
+      unavailable-item:
+        item: "HEAD:red_day_16"
+        name: "&f☃ &c&lD&f&la&c&ly &f&l16"
+        lore:
+          - " "
+          - "&f❆ &f&lRewards:"
+          - "&f❅ &c1x Nice Message"
+          - " "
+          - "&8This can't be claimed yet"
+      opened-item:
+        item: "HEAD:green_open"
+        name: "&2☃ &2&lDay 16 - Opened"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aYou already claimed this item"
+      rewards:
+        msg_test:
+          type: msg
+          message: "&8&l[&cMerry &fChristmas&8&l] &cThis is your reward :{"
+    17:
+      available-item:
+        item: "HEAD:green_day_17"
+        name: "&2☃ &c&lD&2&la&c&ly &2&l17"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aClick to claim this item!"
+      unavailable-item:
+        item: "HEAD:red_day_17"
+        name: "&f☃ &c&lD&f&la&c&ly &f&l17"
+        lore:
+          - " "
+          - "&f❆ &f&lRewards:"
+          - "&f❅ &c1x Nice Message"
+          - " "
+          - "&8This can't be claimed yet"
+      opened-item:
+        item: "HEAD:green_open"
+        name: "&2☃ &2&lDay 17 - Opened"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aYou already claimed this item"
+      rewards:
+        msg_test:
+          type: msg
+          message: "&8&l[&cMerry &fChristmas&8&l] &cThis is your reward :{"
+    18:
+      available-item:
+        item: "HEAD:green_day_18"
+        name: "&2☃ &c&lD&2&la&c&ly &2&l18"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aClick to claim this item!"
+      unavailable-item:
+        item: "HEAD:red_day_18"
+        name: "&f☃ &c&lD&f&la&c&ly &f&l18"
+        lore:
+          - " "
+          - "&f❆ &f&lRewards:"
+          - "&f❅ &c1x Nice Message"
+          - " "
+          - "&8This can't be claimed yet"
+      opened-item:
+        item: "HEAD:green_open"
+        name: "&2☃ &2&lDay 18 - Opened"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aYou already claimed this item"
+      rewards:
+        msg_test:
+          type: msg
+          message: "&8&l[&cMerry &fChristmas&8&l] &cThis is your reward :{"
+    19:
+      available-item:
+        item: "HEAD:green_day_19"
+        name: "&2☃ &c&lD&2&la&c&ly &2&l19"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aClick to claim this item!"
+      unavailable-item:
+        item: "HEAD:red_day_19"
+        name: "&f☃ &c&lD&f&la&c&ly &f&l19"
+        lore:
+          - " "
+          - "&f❆ &f&lRewards:"
+          - "&f❅ &c1x Nice Message"
+          - " "
+          - "&8This can't be claimed yet"
+      opened-item:
+        item: "HEAD:green_open"
+        name: "&2☃ &2&lDay 19 - Opened"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aYou already claimed this item"
+      rewards:
+        msg_test:
+          type: msg
+          message: "&8&l[&cMerry &fChristmas&8&l] &cThis is your reward :{"
+    20:
+      available-item:
+        item: "HEAD:green_day_20"
+        name: "&2☃ &c&lD&2&la&c&ly &2&l20"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aClick to claim this item!"
+      unavailable-item:
+        item: "HEAD:red_day_20"
+        name: "&f☃ &c&lD&f&la&c&ly &f&l20"
+        lore:
+          - " "
+          - "&f❆ &f&lRewards:"
+          - "&f❅ &c1x Nice Message"
+          - " "
+          - "&8This can't be claimed yet"
+      opened-item:
+        item: "HEAD:green_open"
+        name: "&2☃ &2&lDay 20 - Opened"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aYou already claimed this item"
+      rewards:
+        msg_test:
+          type: msg
+          message: "&8&l[&cMerry &fChristmas&8&l] &cThis is your reward :{"
+    21:
+      available-item:
+        item: "HEAD:green_day_21"
+        name: "&2☃ &c&lD&2&la&c&ly &2&l21"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aClick to claim this item!"
+      unavailable-item:
+        item: "HEAD:red_day_21"
+        name: "&f☃ &c&lD&f&la&c&ly &f&l21"
+        lore:
+          - " "
+          - "&f❆ &f&lRewards:"
+          - "&f❅ &c1x Nice Message"
+          - " "
+          - "&8This can't be claimed yet"
+      opened-item:
+        item: "HEAD:green_open"
+        name: "&2☃ &2&lDay 21 - Opened"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aYou already claimed this item"
+      rewards:
+        msg_test:
+          type: msg
+          message: "&8&l[&cMerry &fChristmas&8&l] &cThis is your reward :{"
+    22:
+      available-item:
+        item: "HEAD:green_day_22"
+        name: "&2☃ &c&lD&2&la&c&ly &2&l22"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aClick to claim this item!"
+      unavailable-item:
+        item: "HEAD:red_day_22"
+        name: "&f☃ &c&lD&f&la&c&ly &f&l22"
+        lore:
+          - " "
+          - "&f❆ &f&lRewards:"
+          - "&f❅ &c1x Nice Message"
+          - " "
+          - "&8This can't be claimed yet"
+      opened-item:
+        item: "HEAD:green_open"
+        name: "&2☃ &2&lDay 22 - Opened"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aYou already claimed this item"
+      rewards:
+        msg_test:
+          type: msg
+          message: "&8&l[&cMerry &fChristmas&8&l] &cThis is your reward :{"
+    23:
+      available-item:
+        item: "HEAD:green_day_23"
+        name: "&2☃ &c&lD&2&la&c&ly &2&l23"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aClick to claim this item!"
+      unavailable-item:
+        item: "HEAD:red_day_23"
+        name: "&f☃ &c&lD&f&la&c&ly &f&l23"
+        lore:
+          - " "
+          - "&f❆ &f&lRewards:"
+          - "&f❅ &c1x Nice Message"
+          - " "
+          - "&8This can't be claimed yet"
+      opened-item:
+        item: "HEAD:green_open"
+        name: "&2☃ &2&lDay 23 - Opened"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aYou already claimed this item"
+      rewards:
+        msg_test:
+          type: msg
+          message: "&8&l[&cMerry &fChristmas&8&l] &cThis is your reward :{"
+    24:
+      available-item:
+        item: "HEAD:green_day_24"
+        name: "&2☃ &c&lD&2&la&c&ly &2&l24"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aClick to claim this item!"
+      unavailable-item:
+        item: "HEAD:red_day_24"
+        name: "&f☃ &c&lD&f&la&c&ly &f&l24"
+        lore:
+          - " "
+          - "&f❆ &f&lRewards:"
+          - "&f❅ &c1x Nice Message"
+          - " "
+          - "&8This can't be claimed yet"
+      opened-item:
+        item: "HEAD:green_open"
+        name: "&2☃ &2&lDay 24 - Opened"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aYou already claimed this item"
+      rewards:
+        msg_test:
+          type: msg
+          message: "&8&l[&cMerry &fChristmas&8&l] &cThis is your reward :{"
+    25:
+      available-item:
+        item: "HEAD:green_day_25"
+        name: "&2☃ &c&lD&2&la&c&ly &2&l25"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aClick to claim this item!"
+      unavailable-item:
+        item: "HEAD:red_day_25"
+        name: "&f☃ &c&lD&f&la&c&ly &f&l25"
+        lore:
+          - " "
+          - "&f❆ &f&lRewards:"
+          - "&f❅ &c1x Nice Message"
+          - " "
+          - "&8This can't be claimed yet"
+      opened-item:
+        item: "HEAD:green_open"
+        name: "&2☃ &2&lDay 25 - Opened"
+        lore:
+          - " "
+          - "&2❆ &2&lRewards:"
+          - "&2❅ &c1x Nice Message"
+          - " "
+          - "&aYou already claimed this item"
+      rewards:
+        msg_test:
+          type: msg
+          message: "&8&l[&cMerry &fChristmas&8&l] &cThis is your reward :{"
