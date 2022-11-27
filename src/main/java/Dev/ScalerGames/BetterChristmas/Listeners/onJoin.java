@@ -7,7 +7,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
-import java.util.Calendar;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class onJoin implements Listener {
@@ -15,9 +15,8 @@ public class onJoin implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
         //Added for version 1.1.0 - 26/11/22
-        Date current_date = new Date(); Date date = new Date(2022, Calendar.DECEMBER, 25);
-        Messages.logger(current_date + " | " + date);
-        if (Main.getInstance().getConfig().getBoolean("ChristmasMessage.enabled") && current_date.equals(date)) {
+        SimpleDateFormat sdf = new SimpleDateFormat("ddMM"); String christmas = "2512"; String current = sdf.format(new Date());
+        if (Main.getInstance().getConfig().getBoolean("ChristmasMessage.enabled") && current.equals(christmas)) {
             if (Main.getInstance().getConfig().contains("ChristmasMessage.message")) {
                 MessageSender.sendMessage(event.getPlayer(), Main.getInstance().getConfig().getString("ChristmasMessage.message"));
             }
