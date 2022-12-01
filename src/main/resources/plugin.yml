@@ -1,0 +1,31 @@
+name: BetterChristmas
+version: 1.1.0
+main: Dev.ScalerGames.BetterChristmas.Main
+api-version: 1.13
+author: ScalerGames
+softdepend:
+  - PlaceholderAPI
+  - Vault
+description: A plugin to make christmas special on your server
+commands:
+  betterchristmas:
+    aliases: [bc]
+  adventcalendar:
+    aliases: [ac]
+  presenthunt:
+    aliases: [ph]
+permissions:
+  bc.adventcalendar.open:
+    description: Gives access to the /ac command
+  bc.command.version:
+    description: Gives access to /bc version
+  bc.command.reload:
+    description: Gives access to /bc reload
+  bc.command.reset:
+    description: Gives access to /bc reset
+  bc.command.hunt:
+    description: Gives access to /bc hunt
+  bc.command.head:
+    description: Gives access to /bc head
+  bc.presenthunt.command:
+    description: Gives access to /ph
